@@ -1,0 +1,4 @@
+istruzioni per avviare docker in locale e collegarsi a db:
+avviare da intellij
+docker ps
+docker exec -it docker-db-1 psql -U postgres -d dev-space
