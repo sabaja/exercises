@@ -1,4 +1,20 @@
-istruzioni per avviare docker in locale e collegarsi a db:
-avviare da intellij
+Come Costruire l'Immagine e Avviarla
+Compila il JAR con Maven o Gradle (se non l'hai già fatto):
+mvn clean package
+
+Costruisci l'immagine Docker dalla root del progetto:
+docker build -t my-spring-app -f src/main/docker/Dockerfile .
+
+Esegui il container:
+docker run -p 8080:8080 my-spring-app
+
+Controlla i container attivi:
 docker ps
+
+Esegui un terminale per il database:
 docker exec -it docker-db-1 psql -U postgres -d dev-space
+
+
+
+Per creare manifest:
+jar xf target/exercises-0.0.1-SNAPSHOT.jar META-INF/MANIFEST.MF

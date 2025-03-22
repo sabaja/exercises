@@ -38,28 +38,32 @@ public class ExercisesApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> {
-//            final var student = new Student();
-//            final var school = new School();
-//            student.setName("Jacopo Sabatini");
-//            school.setName("HighSchool");
-//
-//            student.setSchool(school);
-//            final var save = studentRepository.save(student);
-//            log.info("save: {}", studentRepository.findById(save.getId()).orElseGet(() -> null));
-//
-//            final var jpaQueryFactory = jpaQueryFactory();
-//            QStudent qStudent = QStudent.student;
-//
-//            final var res = jpaQueryFactory.selectFrom(qStudent)
-//                    .where(qStudent.name.like("Jacopo%"))
-//                    .fetchOne();
+            final var student = new Student();
+            final var school = new School();
+            student.setName("Gaia Sabatini");
+            school.setName("ICS Padre Puglisi - Laura Conti");
+
+            student.setSchool(school);
+            final var save = studentRepository.save(student);
+            log.info("save: {}", studentRepository.findById(save.getId()).orElseGet(() -> null));
+
+            final var jpaQueryFactory = jpaQueryFactory();
+            QStudent qStudent = QStudent.student;
+
+            final var res = jpaQueryFactory.selectFrom(qStudent)
+                    .where(qStudent.name.like("Jacopo%"))
+                    .fetchOne();
 //            log.info("res: {}", res);
 
             Specification<Student> specification = StudentSpecification.joinSchool("HighSchool")
                     .and(StudentSpecification.likeName("Jacopo"));
 
-            final var all = studentRepository.findAll(specification);
-            log.info("{}", all);
+            final var jacopo = studentRepository.findAll(specification);
+            log.info("Specification con Jacopo: {}", jacopo);
+
+            final var all = studentRepository.findAll();
+            log.info("Tutti: {}", all);
+
         };
     }
 }
