@@ -16,13 +16,13 @@
 #    settings.web-allow-others: false
 spring:
   datasource:
-#    hikari:
-#      connectionTimeout: 20000
-#      maximumPoolSize: 5
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 20
     continue-on-error: true
-#    initialization-mode: always
-#    initialize: true
-    schema: classpath:/schema.sql
+    #    initialization-mode: always
+    #    initialize: true
+    #    schema: classpath:/schema.sql
     url: jdbc:postgresql://localhost:5432/dev-space
     username: postgres
     password: postgres
@@ -34,3 +34,5 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+isInit: ${IS_INIT}
