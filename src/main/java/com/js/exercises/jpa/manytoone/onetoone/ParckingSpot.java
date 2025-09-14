@@ -1,4 +1,4 @@
-package com.js.exercises.onetoone;
+package com.js.exercises.jpa.manytoone.onetoone;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

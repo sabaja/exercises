@@ -1,4 +1,4 @@
-package com.js.exercises.manytoone;
+package com.js.exercises.jpa.manytoone.manytoone;
 
 import jakarta.persistence.*;
 import lombok.Getter;
