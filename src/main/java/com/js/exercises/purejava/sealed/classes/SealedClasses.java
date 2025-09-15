@@ -3,7 +3,7 @@ package com.js.exercises.purejava.sealed.classes;
 
 public class SealedClasses {
 }
-
+                    // si può scrivere anche senza permits perchè nello stesso file
 sealed class Figure permits Circle, Square, Rectangle {
 }
 
