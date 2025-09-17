@@ -1,29 +1,69 @@
 package com.js.exercises.purejava.sealed.classes;
 
 
+import lombok.Getter;
+import lombok.ToString;
+
+sealed interface Service permits Car, Truck {
+
+    int getMaxServiceIntervalInMonths();
+
+    default int getMaxDistanceBetweenServicesInKilometers() {
+        return 100000;
+    }
+
+}
+
 public class SealedClasses {
+
+    public static void main(String[] args) {
+        final var truck = new Truck(100, "0000AAAZ");
+        final var car = new Car(4, "1224PPPP1");
+        System.out.println(truck.getLoadCapacity() + truck.getMaxServiceIntervalInMonths());
+        System.out.println(car.getMaxDistanceBetweenServicesInKilometers() + car.getMaxServiceIntervalInMonths());
+        Service service = new Car(5, "NILL");
+        System.out.println(service.getMaxServiceIntervalInMonths());
+    }
 }
 
-sealed class Figure permits Circle, Square, Rectangle {
-}
+@Getter
+abstract sealed class Vehicle permits Car {
 
-final class Circle extends Figure {
-    float radius;
-}
+    protected final String registrationNumber;
 
-non-sealed class Square extends Figure {
-    float side;
-}
-
-final class FilledRectangle extends Rectangle {
-    int red, green, blue;
+    public Vehicle(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+    }
 
 }
 
-sealed class Rectangle extends Figure {
-    float length, width;
+record Truck(int loadCapacity, String registrationNumber) implements Service {
+
+
+    public int getLoadCapacity() {
+        return loadCapacity;
+    }
+
+    @Override
+    public int getMaxServiceIntervalInMonths() {
+        return 32;
+    }
 }
 
-class MySquare extends Square {
-    String color;
+@ToString
+@Getter
+non-sealed class Car extends Vehicle implements Service {
+
+    private final int numberOfSeats;
+
+    public Car(int numberOfSeats, String registrationNumber) {
+        super(registrationNumber);
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    @Override
+    public int getMaxServiceIntervalInMonths() {
+        return 12;
+    }
+
 }
