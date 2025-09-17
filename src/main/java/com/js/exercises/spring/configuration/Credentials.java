@@ -1,4 +1,4 @@
-package com.js.exercises.configuration;
+package com.js.exercises.spring.configuration;
 
 import lombok.Getter;
 import lombok.Setter;

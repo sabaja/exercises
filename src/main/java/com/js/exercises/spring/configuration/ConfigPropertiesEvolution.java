@@ -1,4 +1,4 @@
-package com.js.exercises.configuration;
+package com.js.exercises.spring.configuration;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ import java.util.Map;
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "mail")
-public class ConfigProperties {
+public class ConfigPropertiesEvolution {
 
     private String hostName;
     private int port;
