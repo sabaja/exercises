@@ -1,0 +1,38 @@
+#spring:
+#  batch:
+#    enabled: false
+#  datasource:
+#    url: jdbc:h2:file:./static/data/demo;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;MODE=PostgreSQL;
+#    username: sa
+#    password: password
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+#  h2:
+#    console.enabled: true
+#    settings.web-allow-others: false
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 20
+    continue-on-error: true
+    #    initialization-mode: always
+    #    initialize: true
+    #    schema: classpath:/schema.sql
+    url: jdbc:postgresql://localhost:5432/dev-space
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      format_sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+isInit: ${IS_INIT}
