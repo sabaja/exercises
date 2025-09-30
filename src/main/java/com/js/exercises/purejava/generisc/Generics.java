@@ -15,7 +15,7 @@ interface Inheritance {
 public class Generics {
 
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 //        test1Generics();
         testInheritance();
         
