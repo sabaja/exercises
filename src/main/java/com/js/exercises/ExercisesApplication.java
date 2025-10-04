@@ -4,7 +4,6 @@ import com.js.exercises.jpa.manytoone.manytoone.School;
 import com.js.exercises.jpa.manytoone.manytoone.Student;
 import com.js.exercises.jpa.manytoone.manytoone.StudentRepository;
 import com.js.exercises.jpa.manytoone.manytoone.StudentSpecification;
-import com.js.exercises.manytoone.QStudent;
 import com.querydsl.jpa.JPQLTemplates;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
@@ -60,11 +59,11 @@ public class ExercisesApplication {
         log.info("save: {}", studentRepository.findById(save.getId()).orElseGet(() -> null));
 
         final var jpaQueryFactory = jpaQueryFactory();
-        QStudent qStudent = QStudent.student;
-
-        final var res = jpaQueryFactory.selectFrom(qStudent)
-                .where(qStudent.name.like("Jacopo%"))
-                .fetchOne();
+//        QStudent qStudent = QStudent.student;
+//
+//        final var res = jpaQueryFactory.selectFrom(qStudent)
+//                .where(qStudent.name.like("Jacopo%"))
+//                .fetchOne();
 //            log.info("res: {}", res);
 
         Specification<Student> specification = StudentSpecification.joinSchool("HighSchool")
