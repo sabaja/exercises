@@ -1,9 +1,9 @@
 package com.js.exercises;
 
-import com.js.exercises.jpa.manytoone.manytoone.School;
-import com.js.exercises.jpa.manytoone.manytoone.Student;
-import com.js.exercises.jpa.manytoone.manytoone.StudentRepository;
-import com.js.exercises.jpa.manytoone.manytoone.StudentSpecification;
+import com.js.exercises.jpa.manytoone.School;
+import com.js.exercises.jpa.manytoone.Student;
+import com.js.exercises.jpa.manytoone.StudentRepository;
+import com.js.exercises.jpa.manytoone.StudentSpecification;
 import com.querydsl.jpa.JPQLTemplates;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

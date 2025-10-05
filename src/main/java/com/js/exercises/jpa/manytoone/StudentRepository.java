@@ -1,4 +1,4 @@
-package com.js.exercises.jpa.manytoone.manytoone;
+package com.js.exercises.jpa.manytoone;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
