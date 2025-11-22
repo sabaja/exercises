@@ -19,8 +19,9 @@ public class SpringBeanScopeController {
 
     @GetMapping("tests")
     public String testBeans() {
-        return "<pre>" + singletonBean + "\n" + prototypeBean + "\n" +
-                requestBean + "\n" + sessionBean + "\n" +
-                applicationBean + "</pre>";
+        return singletonBean + "\n" + prototypeBean + "\n" +
+                singletonBean + "\n" + requestBean + "\n" +
+                sessionBean + "\n" + applicationBean;
     }
+
 }
