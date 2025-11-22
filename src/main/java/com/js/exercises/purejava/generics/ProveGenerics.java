@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProveGenerics {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Box<Number> numbers = new Box<>();
         numbers.add(Integer.valueOf("1"));
         numbers.add(Double.valueOf("2.1"));
@@ -22,7 +22,7 @@ public class ProveGenerics {
 @Getter
 class Box<E> {
 
-    private final List<E> boxedList =  new ArrayList<>();
+    private final List<E> boxedList = new ArrayList<>();
 
     public void add(E element) {
         boxedList.add(element);
