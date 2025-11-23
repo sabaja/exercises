@@ -1,4 +1,4 @@
-package com.js.exercises.spring.bean;
+package com.js.exercises.spring.bean.scope;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;

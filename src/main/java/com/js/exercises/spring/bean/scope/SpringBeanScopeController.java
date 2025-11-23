@@ -1,4 +1,4 @@
-package com.js.exercises.spring.bean;
+package com.js.exercises.spring.bean.scope;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Scope;
