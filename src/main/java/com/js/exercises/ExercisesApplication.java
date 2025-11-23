@@ -13,8 +13,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.domain.Specification;
+
+import java.util.Arrays;
 
 @RequiredArgsConstructor
 @SpringBootApplication
@@ -22,12 +25,15 @@ public class ExercisesApplication {
 
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(ExercisesApplication.class);
     private final StudentRepository studentRepository;
+    private final ApplicationContext applicationContext;
 
     @PersistenceContext
     public EntityManager entityManager;
 
     @Value("${isInit}")
     private boolean isInit;
+
+
 
     public static void main(String[] args) {
         SpringApplication.run(ExercisesApplication.class, args);
@@ -40,6 +46,13 @@ public class ExercisesApplication {
 
     @Bean
     public CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
+        final var beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        Arrays.sort(beanDefinitionNames);
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println(beanDefinitionName);
+        }
+
+
         return args -> {
             if (isInit) {
                 initData(studentRepository);
