@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.thread.nonthread;
+package com.js.exercises.purejava.threads.nonthread;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;

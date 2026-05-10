@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.thread;
+package com.js.exercises.purejava.threads;
 
 public class Main {
 

@@ -1,6 +1,6 @@
-package com.js.exercises.purejava.thread;
+package com.js.exercises.purejava.threads;
 
-import com.js.exercises.purejava.thread.nonthread.Scelta;
+import com.js.exercises.purejava.threads.nonthread.Scelta;
 import lombok.Getter;
 
 import java.util.Random;
