@@ -3,7 +3,7 @@ package com.js.exercises.purejava.thread;
 public class Main {
 
 
-   public static void main(String[] args) throws InterruptedException {
+   static void main() throws InterruptedException {
 
         final int MAX_RESULTS = 20;
 
@@ -21,7 +21,7 @@ public class Main {
         int guessed = consumer.getGuessedResults();
         int percentuale = guessed * 100 / MAX_RESULTS;
 
-        System.out.println(
+        IO.println(
                 "Numero di volte indovinate: " + guessed +
                         "\nPercentuale: " + percentuale + "%"
         );

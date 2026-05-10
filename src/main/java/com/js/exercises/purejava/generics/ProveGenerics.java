@@ -8,13 +8,13 @@ import java.util.List;
 
 public class ProveGenerics {
 
-    static void main(String[] args) {
+    static void main() {
         Box<Number> numbers = new Box<>();
         numbers.add(Integer.valueOf("1"));
         numbers.add(Double.valueOf("2.1"));
         numbers.add(Integer.valueOf("13"));
         numbers.add(Double.valueOf("4.011"));
-        System.out.println(numbers.countHowManyOccurenceOfElement(numbers.getBoxedList(), Double.valueOf("2.1")));
+        IO.println(numbers.countHowManyOccurenceOfElement(numbers.getBoxedList(), Double.valueOf("2.1")));
     }
 }
 

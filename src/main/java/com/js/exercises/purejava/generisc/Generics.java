@@ -15,7 +15,7 @@ interface Inheritance {
 public class Generics {
 
 
-    static void main(String[] args) {
+    static void main() {
 //        test1Generics();
         testInheritance();
         
@@ -29,7 +29,7 @@ public class Generics {
 
         inherintanceUtil.addElement(test);
         inherintanceUtil.addElement(pair);
-        System.out.println(inherintanceUtil);
+        IO.println(inherintanceUtil);
     }
 
     private static void test1Generics() {
@@ -37,8 +37,8 @@ public class Generics {
         Pair<Integer, Object> p2 = new Pair<>(1, 3);
         boolean same = Util.compare(p1, p2);
         boolean ref = p1 == p2;
-        System.out.println(same + " " + ref);
-        System.out.println(p1 + " " + p2);
+        IO.println(same + " " + ref);
+        IO.println(p1 + " " + p2);
     }
 }
 

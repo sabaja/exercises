@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    static void main() throws InterruptedException {
 
         AtomicReference<Scelta> scelta = new AtomicReference<>();
         AtomicBoolean isCorrect = new AtomicBoolean(false);
@@ -28,12 +28,12 @@ public class Main {
             consumerThread.join();
 
             String corretto = isCorrect.get() ? "Giusto" : "Sbagliato";
-            System.out.println("Tentativo " + i + " " + corretto + " Produttore ha scelto " + scelta.get().toString() + ", Consumatore ha scelto " + consumer.getOwnScelta().toString());
+            IO.println("Tentativo " + i + " " + corretto + " Produttore ha scelto " + scelta.get().toString() + ", Consumatore ha scelto " + consumer.getOwnScelta().toString());
         }
 
         final AtomicInteger guessedResults = consumer.getGuessedResults();
         final int percentuale = (guessedResults.get() * 100) / MAX_RESULTS;
 
-        System.out.println("Numero di volte indovinate " + guessedResults.get() + "\nPercentuale " + percentuale + "%");
+        IO.println("Numero di volte indovinate " + guessedResults.get() + "\nPercentuale " + percentuale + "%");
     }
 }

@@ -32,16 +32,16 @@ public class PatternMatching {
         };
     }
 
-    public static void main(String[] args) {
-        System.out.println(describeDayOfWeek(LocalDate.now().getDayOfWeek()));
+    static void main() {
+        IO.println(describeDayOfWeek(LocalDate.now().getDayOfWeek()));
         final var string = """
                 {"dire":"ciao"}
                 """;
         JSONObject json = new JSONObject(string);
-        System.out.println(asStringValue(json));
+        IO.println(asStringValue(json));
         BigDecimal bigDecimal = new BigDecimal("13.45");
-        System.out.println(asStringValue(bigDecimal));
-        System.out.println(asStringValue(LocalDateTime.now()));
+        IO.println(asStringValue(bigDecimal));
+        IO.println(asStringValue(LocalDateTime.now()));
 
     }
 }

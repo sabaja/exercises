@@ -3,13 +3,13 @@ package com.js.exercises.pattern;
 public class SlidingWindows {
 
 
-    public static void main(String[] args) {
+    static void main() {
         testMaximumSumOverRangesNaive();
     }
 
     private static void testMaximumSumOverRangesNaive() {
         int[] arr = {2, 1, 5, 1, 3, 2};
-        System.out.println("Naive result: " + maximumSumOverRangesNaive(arr, arr.length, 3));
+        IO.println("Naive result: " + maximumSumOverRangesNaive(arr, arr.length, 3));
     }
 
     public static int maximumSumOverRangesNaive(int[] arr, int len, int k) {

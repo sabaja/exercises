@@ -35,7 +35,7 @@ public class ExercisesApplication {
 
 
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         SpringApplication.run(ExercisesApplication.class, args);
     }
 
@@ -49,11 +49,11 @@ public class ExercisesApplication {
         final var beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         Arrays.sort(beanDefinitionNames);
         for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println(beanDefinitionName);
+            IO.println(beanDefinitionName);
         }
 
 
-        return args -> {
+        return _ -> {
             if (isInit) {
                 initData(studentRepository);
             }
@@ -69,7 +69,7 @@ public class ExercisesApplication {
 
         student.setSchool(school);
         final var save = studentRepository.save(student);
-        log.info("save: {}", studentRepository.findById(save.getId()).orElseGet(() -> null));
+        log.info("save: {}", studentRepository.findById(save.getId()).orElse(null));
 
         final var jpaQueryFactory = jpaQueryFactory();
 //        QStudent qStudent = QStudent.student;

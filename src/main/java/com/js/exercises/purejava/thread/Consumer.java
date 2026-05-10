@@ -33,7 +33,7 @@ public class Consumer extends Thread {
                     guessedResults++;
                 }
 
-                System.out.println(
+                IO.println(
                     "Tentativo " + (i + 1) +
                     " | Produttore: " + producerChoice +
                     " | Consumatore: " + ownScelta

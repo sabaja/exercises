@@ -1,7 +1,6 @@
 package com.js.exercises.spring.bean.scope;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
 @Component

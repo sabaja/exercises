@@ -16,13 +16,13 @@ sealed interface Service permits Car, Truck {
 
 public class SealedClasses {
 
-    public static void main(String[] args) {
+    static void main() {
         final var truck = new Truck(100, "0000AAAZ");
         final var car = new Car(4, "1224PPPP1");
-        System.out.println(truck.getLoadCapacity() + truck.getMaxServiceIntervalInMonths());
-        System.out.println(car.getMaxDistanceBetweenServicesInKilometers() + car.getMaxServiceIntervalInMonths());
+        IO.println(truck.getLoadCapacity() + truck.getMaxServiceIntervalInMonths());
+        IO.println(car.getMaxDistanceBetweenServicesInKilometers() + car.getMaxServiceIntervalInMonths());
         Service service = new Car(5, "NILL");
-        System.out.println(service.getMaxServiceIntervalInMonths());
+        IO.println(service.getMaxServiceIntervalInMonths());
     }
 }
 
