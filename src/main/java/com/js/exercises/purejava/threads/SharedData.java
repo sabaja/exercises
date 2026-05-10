@@ -2,26 +2,18 @@ package com.js.exercises.purejava.threads;
 
 import com.js.exercises.purejava.threads.nonthread.Scelta;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
 public class SharedData {
 
-    private Scelta scelta;
-    private boolean available = false;
+    private final BlockingQueue<Scelta> queue = new ArrayBlockingQueue<>(1);
 
-    public synchronized void put(Scelta scelta) throws InterruptedException {
-        while (available) {
-            wait();
-        }
-        this.scelta = scelta;
-        this.available = true;
-        notifyAll();
+    public void put(Scelta scelta) throws InterruptedException {
+        queue.put(scelta);
     }
 
-    public synchronized Scelta take() throws InterruptedException {
-        while (!available) {
-            wait();
-        }
-        available = false;
-        notifyAll();
-        return scelta;
+    public Scelta take() throws InterruptedException {
+        return queue.take();
     }
 }

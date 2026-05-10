@@ -2,13 +2,10 @@ package com.js.exercises.purejava.threads;
 
 import com.js.exercises.purejava.threads.nonthread.Scelta;
 
-import java.util.Random;
-
 public class Producer extends Thread {
 
     private final SharedData sharedData;
     private final int attempts;
-    private final Random random = new Random();
 
     public Producer(SharedData sharedData, int attempts) {
         this.sharedData = sharedData;
@@ -19,9 +16,7 @@ public class Producer extends Thread {
     public void run() {
         try {
             for (int i = 0; i < attempts; i++) {
-                Scelta scelta = random.nextInt(2) == 0
-                        ? Scelta.SOPRA
-                        : Scelta.SOTTO;
+                Scelta scelta = Scelta.randomScelta();
 
                 sharedData.put(scelta);
             }
