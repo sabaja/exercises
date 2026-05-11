@@ -1,6 +1,6 @@
-package com.js.exercises.purejava.threads;
+package com.js.exercises.purejava.threads.consumerproducer;
 
-import com.js.exercises.purejava.threads.nonthread.Scelta;
+import com.js.exercises.purejava.threads.consumerproducer.nonthread.Scelta;
 
 public class Producer extends Thread {
 

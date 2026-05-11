@@ -1,9 +1,9 @@
-package com.js.exercises.purejava.threads;
+package com.js.exercises.purejava.threads.consumerproducer;
 
 public class Main {
 
 
-   static void main() throws InterruptedException {
+    static void main() throws InterruptedException {
 
         final int MAX_RESULTS = 20;
 
@@ -15,7 +15,11 @@ public class Main {
         producer.start();
         consumer.start();
 
-        producer.join();
+//        producer.join();
+        /*
+          Comunico al thread principale di aspettare la fine del processo innescato dai thread producer e consumer
+          Senza il metodo join serebbe andato subito ai comandi sotto
+        */
         consumer.join();
 
         int guessed = consumer.getGuessedResults();

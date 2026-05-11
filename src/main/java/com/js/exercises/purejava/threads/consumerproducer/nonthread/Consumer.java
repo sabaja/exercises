@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.nonthread;
+package com.js.exercises.purejava.threads.consumerproducer.nonthread;
 
 import lombok.Getter;
 
