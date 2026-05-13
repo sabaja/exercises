@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.synchronizeer;
+package com.js.exercises.purejava.threads.synchronizer;
 
 // Provare a commentare le parti synchronized
 public class Synch {

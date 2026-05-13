@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.consumerproducer.nonthread;
+package com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio.nonthread;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;

@@ -1,9 +1,9 @@
-package com.js.exercises.purejava.threads.consumerproducer;
+package com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio;
 
-import com.js.exercises.purejava.threads.consumerproducer.nonthread.Scelta;
+import com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio.nonthread.Scelta;
 import lombok.Getter;
 
-public class Consumer implements Runnable {
+public class Consumer extends Thread {
 
     private final SharedData sharedData;
     private final int attempts;
