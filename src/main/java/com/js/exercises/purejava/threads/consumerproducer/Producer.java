@@ -2,7 +2,7 @@ package com.js.exercises.purejava.threads.consumerproducer;
 
 import com.js.exercises.purejava.threads.consumerproducer.nonthread.Scelta;
 
-public class Producer extends Thread {
+public class Producer implements Runnable {
 
     private final SharedData sharedData;
     private final int attempts;

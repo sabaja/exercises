@@ -9,7 +9,7 @@ public class ThreadRace {
 
         loClick.start();
         hiClick.start();
-        IO.println("ThreadRace started, please wait for 10 seconds,");
+        IO.println("ThreadRace started, please wait for 10 seconds..");
 
         try {
             Thread.sleep(10000);
@@ -19,7 +19,7 @@ public class ThreadRace {
         loClick.stop();
         hiClick.stop();
 
-        IO.println("lo:[" + loClick.getClick() + "] vs hi:[" + hiClick.getClick() + "]");
+        IO.println("lo:[" + loClick.getClicker() + "] vs hi:[" + hiClick.getClicker() + "]");
 
     }
 }

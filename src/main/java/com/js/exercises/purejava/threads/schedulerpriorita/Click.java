@@ -2,11 +2,13 @@ package com.js.exercises.purejava.threads.schedulerpriorita;
 
 import lombok.Getter;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Click implements Runnable {
 
     private final Thread clickThread;
     @Getter
-    private long click = 0L;
+    private final AtomicLong clicker = new AtomicLong(0L);
     private volatile boolean running = true;
 
     public Click(int priority) {
@@ -17,7 +19,7 @@ public class Click implements Runnable {
     @Override
     public void run() {
         while (running) {
-            click++;
+            clicker.incrementAndGet();
         }
     }
 

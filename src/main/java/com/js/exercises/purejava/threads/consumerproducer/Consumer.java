@@ -3,7 +3,7 @@ package com.js.exercises.purejava.threads.consumerproducer;
 import com.js.exercises.purejava.threads.consumerproducer.nonthread.Scelta;
 import lombok.Getter;
 
-public class Consumer extends Thread {
+public class Consumer implements Runnable {
 
     private final SharedData sharedData;
     private final int attempts;
