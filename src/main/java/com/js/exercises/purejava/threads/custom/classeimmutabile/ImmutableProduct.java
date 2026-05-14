@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.classeimmutabile;
+package com.js.exercises.purejava.threads.custom.classeimmutabile;
 
 import lombok.Getter;
 

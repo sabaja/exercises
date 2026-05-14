@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio;
+package com.js.exercises.purejava.threads.custom.idealeconomy.quartaf.esercizio;
 
 public class Main {
 

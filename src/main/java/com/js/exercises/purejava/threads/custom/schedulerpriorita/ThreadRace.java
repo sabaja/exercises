@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.schedulerpriorita;
+package com.js.exercises.purejava.threads.custom.schedulerpriorita;
 
 public class ThreadRace {
 

@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.interfaccia.runnable;
+package com.js.exercises.purejava.threads.custom.interfaccia.runnable;
 
 public class ThreadCreation implements Runnable {
 

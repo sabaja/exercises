@@ -1,6 +1,7 @@
-package com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio;
+package com.js.exercises.purejava.threads.custom.idealeconomy.quartaf.esercizio;
 
-import com.js.exercises.purejava.threads.idealeconomy.quartaf.esercizio.nonthread.Scelta;
+
+import com.js.exercises.purejava.threads.custom.idealeconomy.quartaf.esercizio.nonthread.Scelta;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

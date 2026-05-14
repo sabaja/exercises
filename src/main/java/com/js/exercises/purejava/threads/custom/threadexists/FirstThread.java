@@ -1,4 +1,4 @@
-package com.js.exercises.purejava.threads.threadexists;
+package com.js.exercises.purejava.threads.custom.threadexists;
 
 import java.time.Duration;
 

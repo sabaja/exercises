@@ -1,9 +1,21 @@
-package com.js.exercises.purejava.threads.idealeconomy.custom;
+package com.js.exercises.purejava.threads.custom.idealeconomy;
+
+public class CustomIdealEconomy {
+
+    static void main() {
+        WareHouse wareHouse = new WareHouse();
+        new Thread(new Consumer(wareHouse), "Consumer").start();
+        new Thread(new Producer(wareHouse), "Producer").start();
+
+    }
+
+}
 
 class WareHouse {
 
     private int numberOfProducts;
     private volatile int idProduct;
+
     private volatile boolean empty = true; // guarded block
 
     public synchronized void put(int idProduct) {
@@ -46,6 +58,7 @@ class WareHouse {
 
 class Consumer implements Runnable {
 
+
     private final WareHouse wareHouse;
 
     Consumer(WareHouse wareHouse) {
@@ -58,9 +71,11 @@ class Consumer implements Runnable {
             wareHouse.put(i);
         }
     }
+
 }
 
 class Producer implements Runnable {
+
 
     private final WareHouse wareHouse;
 
@@ -73,16 +88,6 @@ class Producer implements Runnable {
         for (int i = 0; i < 5; i++) {
             wareHouse.get();
         }
-    }
-}
-
-public class CustomIdealEconomy {
-
-    static void main() {
-        WareHouse wareHouse = new WareHouse();
-        new Thread(new Consumer(wareHouse), "Consumer").start();
-        new Thread(new Producer(wareHouse), "Producer").start();
-
     }
 
 }
