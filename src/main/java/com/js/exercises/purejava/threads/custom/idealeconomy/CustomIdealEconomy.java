@@ -58,7 +58,6 @@ class WareHouse {
 
 class Consumer implements Runnable {
 
-
     private final WareHouse wareHouse;
 
     Consumer(WareHouse wareHouse) {
@@ -75,7 +74,6 @@ class Consumer implements Runnable {
 }
 
 class Producer implements Runnable {
-
 
     private final WareHouse wareHouse;
 
